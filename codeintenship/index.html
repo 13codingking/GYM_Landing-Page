@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            /* padding: 100px; */
+            /* width: 100%; */
+            /* height: 500px; */
+            background-image: url('g2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            margin-bottom: 0;
+                }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 0;
+
+            padding: 0 1rem;
+        }
+
+        #imglogo {
+            position: absolute;
+            left: 5.5rem;
+            top: 0.2rem;
+            height: 10vh;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        #nav-menu {
+            position: absolute;
+            right: 1rem;
+        }
+
+        nav ul li {
+            margin-left: 1.8rem;
+            margin-right: 1.8rem;
+
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem;
+        }
+
+        #b1 {
+            color: #040303;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 0.4rem 1.3rem;
+            font-size: 1rem; 
+            margin: 0 0.5rem 0 0.5rem;
+        }
+          /* .picturebackground{
+            margin-top: 0%;
+            background-image: url('g2.jpg');
+            background-size: cover;
+            position: static;
+          background-position: center;
+            background-repeat: no-repeat;
+            height: 30rem;
+            width: 100rem;
+          } */
+        .extrainfo {
+            color: rgb(245, 245, 245);
+            margin: 3rem;
+            font-size: medium;
+            /* height: 40vh; */
+        }
+
+        .hp1 {
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin: 1.5rem 0 0.3rem 0;
+        }
+
+        .price-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .p1 {
+            color: rgb(8, 8, 8);
+            background-color: #fff;
+            border: 3px solid rgb(0, 0, 0);
+            text-align: center;
+            padding: 1.4rem 1.4rem 1.4rem 1.4rem;
+            width: 19vw;
+            margin: 1rem 3rem 3rem 3rem;
+            /* height: 20rem; */
+            height: 55vh;
+        }
+
+        .p2 {
+            color: rgb(3, 3, 3);
+            background-color: white;
+            border: 3px solid rgb(5, 0, 0);
+            text-align: center;
+            padding: 1.4rem 1.4rem 1.4rem 1.4rem;
+            width: 19vw;
+            margin: 1rem 3rem 3rem 3rem;
+            /* height: 20rem; */
+            height: 55vh;
+        }
+
+        .p3 {
+            color: rgb(0, 0, 0);
+            background-color: #fff;
+            border: 3px solid rgb(5, 0, 0);
+            text-align: center;
+            padding: 1.4rem 1.4rem 1.4rem 1.4rem;
+            width: 19vw;
+            margin: 1rem 3rem 3rem 3rem;
+            /* height: 20rem; */
+            height: 55vh;
+        }
+
+        h2 {
+            padding: 0.5rem;
+        }
+
+        #b2 {
+            background-color: rgb(41, 10, 10);
+            color: white;
+            margin: 0.6rem;
+            padding: 0.4rem;
+            cursor: pointer;
+        }
+
+        #contactForm {
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form label {
+            margin-bottom: 0.5rem;
+        }
+
+        form input,
+        form textarea {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 0.75rem;
+            font-size: 1rem;
+            background: #e8491d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="logo">
+                <img src="Screenshot_2024-06-15_111806-removebg-preview.png" alt="GYM" id="imglogo">GREATFITNESS
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#home">Blog</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Pages">Pages</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <button id="b1">Join Now</button>
+            </ul>
+        </nav>
+    </header>
+    <!-- <div class="picturebackground"> -->
+<div class="extrainfo">
+            <h2><b><u>* Important's :- </u></b></h2>
+            <h3>FUNCTIONAL TRAINING</h3>
+            <p>• Improve Your Balance, Coordination, and Agility with Functional Training!<br>
+                • Train Your Body to Perform Better in Daily Life! </p> <br>
+            <h3>WEIGHT TRAINING</h3>
+            <p>• Build Strength and Sculpt Your Body with Weight Training!<br>
+                • Lift Your Way to a Healthier, Happier You!</p>
+        </div>
+    </div>
+    <h2 class="hp1"><u><b>* Price / Monthly Plan's</b></u></h2>
+    <div class="price-container">
+
+        <div class="p1">
+            <h2>Free :</h2>
+            <p> <b> 0 RS/months </b><br>
+                1 User Included <br>
+                2GB Of Storage <br>
+                Email Support <br>
+                Provide Instruction<br>
+                Self Training<br>
+                <button id="b2">SignUp Now</button>
+            </p>
+        </div>
+
+        <div class="p2">
+            <h2> Pro :</h2>
+            <p>
+                <b> 850 RS/months </b><br>
+                5 User Included <br>
+                5GB Of Storage <br>
+                Email Support <br>
+                Help Center Access <br>
+                Downloaded Training Viode<br>
+                <button id="b2">SignUp Now</button>
+            </p>
+        </div>
+
+        <div class="p3">
+            <h2>Ultra Pro :</h2>
+            <p> <b> 1500 RS/months</b> <br>
+                10 User Included <br>
+                15GB Of Storage <br>
+                Help Center Access <br>
+                Email Support <br>
+                Live Training <br>
+                Downloading<br>
+                Provide Personal Coach <br>
+                <button id="b2">SignUp Now</button>
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <form id="contactForm">
+        <u><b>* Join a great fitness group :</b></u>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="mobileno">Mobile No:</label>
+        <input type="mobile no" id="mobileno">
+        <button type="submit">Join Now</button>
+    </form>
+    <!-- <p id="formResponse"></p> -->
+    </section>
+    <footer>
+        <p>&copy; 2024 GREATFITNESS. Increase Your Stamina.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const formResponse = document.getElementById('formResponse');
+            const navMenu = document.getElementById('nav-menu');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const mobileno = document.getElementById('mobileno').value;
+                alert('Thankyou for joining!');
+                // formResponse.innerText = `Thank you, ${name}! We have received your message.`;
+
+                form.reset();
+            });
+
+            menuToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
